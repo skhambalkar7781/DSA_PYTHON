@@ -208,8 +208,23 @@
     
 # =================================================================
 
-dict = {'B':97,'A':96,'C':98}
-largest_key = max(dict, key=dict.get)
-print(largest_key)
+# dict = {'B':97,'A':96,'C':98}
+# largest_key = max(dict, key=dict.get)
+# print(largest_key)
 # =============================================================
 
+# num = 123
+# a = num % 10 
+# num = num//10
+# b  = num%10
+# c = num//10
+# rev = a*100 + b*10 + c*1
+# print(rev)
+# ================================================================
+Amount = int(input("Enter the withdraw amount: "))
+print("100 notes =",Amount//100)
+print("50 notes =",(Amount%100)//50)
+print("20 notes =",((Amount%100)%50)//20)
+print("10 notes =",(((Amount%100)%50)%20)//10)
+print("5 notes =",((((Amount%100)%50)%20)%10)//5)
+      
