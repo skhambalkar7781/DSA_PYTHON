@@ -17,6 +17,15 @@ def addNode(self, value):
         self.tail.next = self.node
         self.tail = self.node
         
+def addNodeInBetween(self, value, index):
+    self.node = Node(value)
+    if self.head is None:
+        self.head = self.node
+        self.tail = self.node
+    else:
+        self.tail.next = self.node
+        self.tail = self.node
+        
 def displaynode(self):
     while self.head is not None:
         print(self.head.data)
@@ -38,4 +47,9 @@ if __name__ == "__main__":
             print("Node added successfully in single linked list")
         elif choice == 5:
             object.displaynode()
+            
+        elif choice == 3:
+            value = int(input("Enter the value: "))
+            index = int(input("Enter the index: "))
+            object.addNodeInBetween(value, index)
         
