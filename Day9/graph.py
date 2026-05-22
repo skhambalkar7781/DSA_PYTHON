@@ -21,6 +21,13 @@ class Graph:
             self.adjacency_list[vertex1].append(vertex2)
             return True
         return False
+    def remove_vertex(self, vertex):
+        if vertex in self.adjacency_list.keys():
+            del self.adjacency_list[vertex]
+            for other_vertex in self.adjacency_list:
+                self.adjacency_list[other_vertex] = [v for v in self.adjacency_list[other_vertex] if v != vertex]
+            return True
+        return False
             
 my_graph = Graph()
 my_graph.add_vertex("A")
